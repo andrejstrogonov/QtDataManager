@@ -1,39 +1,43 @@
-#ifndef TREEMODEL_H
-#define TREEMODEL_H
+#ifndef TREENODE_H
+#define TREENODE_H
 
-#include <QAbstractItemModel>
-#include <QSqlDatabase>
+#include <QString>
+#include <QList>
+#include <QVariant>
+#include <QVector>
 
-class TreeNode;
-
-class TreeModel : public QAbstractItemModel
-{
-    Q_OBJECT
-
+class TreeNode {
 public:
-    explicit TreeModel(QObject *parent = nullptr);
-    ~TreeModel();
+    // Added Transmitter and Spec to match TreeModel usage
+    enum class Type { Root, Object, Transmitter, Spec };
 
-    QVariant data(const QModelIndex &index, int role) const override;
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
-    QVariant headerData(int section, Qt::Orientation orientation,
-                        int role = Qt::DisplayRole) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
-    QModelIndex index(int row, int column,
-                      const QModelIndex &parent = QModelIndex()) const override;
-    QModelIndex parent(const QModelIndex &index) const override;
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    explicit TreeNode(const QString &display, Type type, int id, TreeNode *parent = nullptr);
+    // Added for compatibility with your previous Unit Tests
+    explicit TreeNode(const QVector<QVariant> &data, TreeNode *parent = nullptr);
+    
+    ~TreeNode();
 
-    void loadFromDatabase();
-    void reload();
-    int transmitterId(const QModelIndex &index) const;
-    bool addItem(const QString &parentType, const QVariantList &values);
-    bool removeItem(const QModelIndex &index);
+    void appendChild(TreeNode *child);
+    void insertChild(int row, TreeNode *child);
+    
+    TreeNode *child(int row) const;
+    int childCount() const;
+    int columnCount() const { return 1; }
+    
+    QVariant data(int column) const;
+    void setData(int column, const QVariant &value);
+    
+    int row() const;
+    TreeNode *parent() const;
+    Type type() const;
+    int id() const;
 
 private:
-    TreeNode *m_rootItem;
-    void setupModelData(TreeNode *parent);
+    QString m_display;
+    Type m_type;
+    int m_id;
+    TreeNode *m_parent;
+    QList<TreeNode*> m_children;
 };
 
-#endif // TREEMODEL_H
+#endif
