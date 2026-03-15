@@ -15,7 +15,7 @@ private slots:
     void testData();
     void testInsertChild();
     void testConstruction();
-    void testChildCount
+    void testChildCount();
 };
 
 void TestTreeNode::testAppendChild()
