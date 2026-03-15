@@ -123,19 +123,19 @@ QModelIndex TreeModel::index(int row, int column,
     return QModelIndex();
 }
 
-QModelIndex TreeModel::parent(const QModelIndex &index) const
-{
-    if (!index.isValid())
-        return QModelIndex();
+// in treemodel.cpp
+QModelIndex TreeModel::parent(const QModelIndex &index) const {
+    if (!index.isValid()) return QModelIndex();
 
     TreeNode *childItem = static_cast<TreeNode*>(index.internalPointer());
     TreeNode *parentItem = childItem->parent();
 
-    if (parentItem == m_rootItem || !parentItem)
-        return QModelIndex();
+    // The root item has no parent index in QAbstractItemModel
+    if (parentItem == m_rootItem || !parentItem) return QModelIndex();
 
     return createIndex(parentItem->row(), 0, parentItem);
 }
+
 
 int TreeModel::rowCount(const QModelIndex &parent) const
 {
