@@ -4,7 +4,7 @@ project(QtDataManager VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Enable Qt's automatic moc / rcc / uic integration
+# Автоматическая генерация мета-кода Qt
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -12,7 +12,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Test Qml)
 
-# --- Define Source Groups ---
+# Список исходных файлов
 set(SOURCES
     main.cpp
     dbmanager.cpp
@@ -23,6 +23,7 @@ set(SOURCES
     controllers/valuedelegate.cpp
 )
 
+# Список заголовочных файлов
 set(HEADERS
     dbmanager.h
     models/treemodel.h
@@ -32,33 +33,28 @@ set(HEADERS
     controllers/valuedelegate.h
 )
 
-# --- Main App ---
-qt_add_executable(${PROJECT_NAME} 
+# --- Основное приложение ---
+# Используем имя QtDataManagerApp, чтобы избежать конфликта с папкой проекта
+qt_add_executable(QtDataManagerApp 
     ${SOURCES} 
     ${HEADERS} 
     views/mainwindow.ui
 )
 
-# FIX 1: Rename the output binary to avoid collision with the directory "QtDataManager"
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    OUTPUT_NAME "QtDataManagerApp"
-)
-
-# Define the QML module
-qt_add_qml_module(${PROJECT_NAME}
+# Конфигурация QML модуля (привязана к QtDataManagerApp)
+qt_add_qml_module(QtDataManagerApp
     URI QtDataManager
     VERSION 1.0
     QML_FILES main.qml
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR})
-target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Sql Qt6::Qml)
+target_include_directories(QtDataManagerApp PRIVATE ${CMAKE_SOURCE_DIR})
+target_link_libraries(QtDataManagerApp PRIVATE Qt6::Widgets Qt6::Sql Qt6::Qml)
 
-# --- Tests Configuration ---
+# --- Тесты ------------------------------------------------------------
 enable_testing()
 
-# 1. TreeNode Test
-# FIX 2: Corrected path to tests/test_treenode.cpp
+# 1. Тест TreeNode (добавлен treenode.cpp для линковки)
 add_executable(test_treenode 
     tests/test_treenode.cpp 
     models/treenode.cpp 
@@ -68,7 +64,7 @@ target_include_directories(test_treenode PRIVATE ${CMAKE_SOURCE_DIR})
 target_link_libraries(test_treenode PRIVATE Qt6::Test Qt6::Widgets Qt6::Core)
 add_test(NAME TreeNodeTest COMMAND test_treenode)
 
-# 2. ValueDelegate Test
+# 2. Тест ValueDelegate
 add_executable(test_valuedelegate
     tests/test_valuedelegate.cpp
     controllers/valuedelegate.cpp
@@ -78,7 +74,7 @@ target_include_directories(test_valuedelegate PRIVATE ${CMAKE_SOURCE_DIR})
 target_link_libraries(test_valuedelegate PRIVATE Qt6::Test Qt6::Widgets)
 add_test(NAME ValueDelegateTest COMMAND test_valuedelegate)
 
-# 3. DbManager Test
+# 3. Тест DbManager
 add_executable(test_dbmanager
     tests/test_dbmanager.cpp
     dbmanager.cpp
