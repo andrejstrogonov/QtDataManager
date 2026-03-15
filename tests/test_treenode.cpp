@@ -1,6 +1,3 @@
-#ifndef TEST_TREENODE_H
-#define TEST_TREENODE_H
-
 #include <QtTest/QtTest>
 #include <QVector>
 #include <QVariant>
@@ -26,7 +23,6 @@ void TestTreeNode::testAppendChild()
     TreeNode root(data);
     QCOMPARE(root.childCount(), 0);
 
-    // Fixed: Explicitly cast to QVector<QVariant>
     TreeNode *child = new TreeNode(QVector<QVariant>({"child"}), &root);
     root.appendChild(child);
     QCOMPARE(root.childCount(), 1);
@@ -35,7 +31,6 @@ void TestTreeNode::testAppendChild()
 
 void TestTreeNode::testRowAndParent()
 {
-    // Fixed: Explicitly cast to QVector<QVariant>
     TreeNode root(QVector<QVariant>({"r"}));
     TreeNode *c1 = new TreeNode(QVector<QVariant>({"c1"}), &root);
     TreeNode *c2 = new TreeNode(QVector<QVariant>({"c2"}), &root);
@@ -101,5 +96,5 @@ void TestTreeNode::testChildCount()
 }
 
 QTEST_MAIN(TestTreeNode)
+// This include tells MOC to generate code for the Q_OBJECT in this .cpp file
 #include "test_treenode.moc"
-#endif
