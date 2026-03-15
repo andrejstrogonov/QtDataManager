@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/QtDataManager">
+    <file alias="qmldir">/public/Work/build/QtDataManager/qmldir</file>
+  </qresource>
+</RCC>
+

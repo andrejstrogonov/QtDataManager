@@ -1,0 +1,107 @@
+[
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/QtDataManager_autogen/mocs_compilation.cpp.o -c /public/Work/build/QtDataManager_autogen/mocs_compilation.cpp",
+  "file": "/public/Work/build/QtDataManager_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/main.cpp.o -c /public/Work/main.cpp",
+  "file": "/public/Work/main.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/dbmanager.cpp.o -c /public/Work/dbmanager.cpp",
+  "file": "/public/Work/dbmanager.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/models/treemodel.cpp.o -c /public/Work/models/treemodel.cpp",
+  "file": "/public/Work/models/treemodel.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/models/treenode.cpp.o -c /public/Work/models/treenode.cpp",
+  "file": "/public/Work/models/treenode.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/views/mainwindow.cpp.o -c /public/Work/views/mainwindow.cpp",
+  "file": "/public/Work/views/mainwindow.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/controllers/valuedelegate.cpp.o -c /public/Work/controllers/valuedelegate.cpp",
+  "file": "/public/Work/controllers/valuedelegate.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/qtdatamanager_qmltyperegistrations.cpp.o -c /public/Work/build/qtdatamanager_qmltyperegistrations.cpp",
+  "file": "/public/Work/build/qtdatamanager_qmltyperegistrations.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/build/.rcc/qrc_qmake_QtDataManager.cpp.o -c /public/Work/build/.rcc/qrc_qmake_QtDataManager.cpp",
+  "file": "/public/Work/build/.rcc/qrc_qmake_QtDataManager.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/build/.rcc/qmlcache/QtDataManager_qmlcache_loader.cpp.o -c /public/Work/build/.rcc/qmlcache/QtDataManager_qmlcache_loader.cpp",
+  "file": "/public/Work/build/.rcc/qmlcache/QtDataManager_qmlcache_loader.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/build/.rcc/qmlcache/QtDataManager_main_qml.cpp.o -c /public/Work/build/.rcc/qmlcache/QtDataManager_main_qml.cpp",
+  "file": "/public/Work/build/.rcc/qmlcache/QtDataManager_main_qml.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_NO_DEBUG -DQT_QML_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -I/public/Work/build/QtDataManager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml/6.2.4/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore/6.2.4/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtQml -isystem /usr/include/x86_64-linux-gnu/qt6/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/QtDataManager.dir/build/.rcc/qrc_QtDataManager_raw_qml_0.cpp.o -c /public/Work/build/.rcc/qrc_QtDataManager_raw_qml_0.cpp",
+  "file": "/public/Work/build/.rcc/qrc_QtDataManager_raw_qml_0.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/public/Work/build/test_treenode_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -fPIC -std=gnu++17 -o CMakeFiles/test_treenode.dir/test_treenode_autogen/mocs_compilation.cpp.o -c /public/Work/build/test_treenode_autogen/mocs_compilation.cpp",
+  "file": "/public/Work/build/test_treenode_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/public/Work/build/test_treenode_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -fPIC -std=gnu++17 -o CMakeFiles/test_treenode.dir/tests/test_treenode.cpp.o -c /public/Work/tests/test_treenode.cpp",
+  "file": "/public/Work/tests/test_treenode.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/public/Work/build/test_treenode_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -fPIC -std=gnu++17 -o CMakeFiles/test_treenode.dir/models/treenode.cpp.o -c /public/Work/models/treenode.cpp",
+  "file": "/public/Work/models/treenode.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/public/Work/build/test_valuedelegate_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -fPIC -std=gnu++17 -o CMakeFiles/test_valuedelegate.dir/test_valuedelegate_autogen/mocs_compilation.cpp.o -c /public/Work/build/test_valuedelegate_autogen/mocs_compilation.cpp",
+  "file": "/public/Work/build/test_valuedelegate_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/public/Work/build/test_valuedelegate_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -fPIC -std=gnu++17 -o CMakeFiles/test_valuedelegate.dir/tests/test_valuedelegate.cpp.o -c /public/Work/tests/test_valuedelegate.cpp",
+  "file": "/public/Work/tests/test_valuedelegate.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -I/public/Work/build/test_valuedelegate_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -fPIC -std=gnu++17 -o CMakeFiles/test_valuedelegate.dir/controllers/valuedelegate.cpp.o -c /public/Work/controllers/valuedelegate.cpp",
+  "file": "/public/Work/controllers/valuedelegate.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -I/public/Work/build/test_dbmanager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/test_dbmanager.dir/test_dbmanager_autogen/mocs_compilation.cpp.o -c /public/Work/build/test_dbmanager_autogen/mocs_compilation.cpp",
+  "file": "/public/Work/build/test_dbmanager_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -I/public/Work/build/test_dbmanager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/test_dbmanager.dir/tests/test_dbmanager.cpp.o -c /public/Work/tests/test_dbmanager.cpp",
+  "file": "/public/Work/tests/test_dbmanager.cpp"
+},
+{
+  "directory": "/public/Work/build",
+  "command": "/usr/bin/c++ -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_TESTCASE_BUILDDIR=\\\"/public/Work/build\\\" -DQT_TESTCASE_SOURCEDIR=\\\"/public/Work\\\" -DQT_TESTLIB_LIB -I/public/Work/build/test_dbmanager_autogen/include -I/public/Work -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtSql -fPIC -std=gnu++17 -o CMakeFiles/test_dbmanager.dir/dbmanager.cpp.o -c /public/Work/dbmanager.cpp",
+  "file": "/public/Work/dbmanager.cpp"
+}
+]

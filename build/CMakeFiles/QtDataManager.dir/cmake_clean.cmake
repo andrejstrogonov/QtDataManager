@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  ".rcc/qmlcache/QtDataManager_main_qml.cpp"
+  ".rcc/qrc_QtDataManager_raw_qml_0.cpp"
+  ".rcc/qrc_qmake_QtDataManager.cpp"
+  "CMakeFiles/QtDataManager_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/QtDataManager_autogen.dir/ParseCache.txt"
+  "QtDataManager_autogen"
+  "CMakeFiles/QtDataManager.dir/QtDataManager_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/QtDataManager.dir/QtDataManager_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qmlcache/QtDataManager_main_qml.cpp.o"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qmlcache/QtDataManager_main_qml.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qmlcache/QtDataManager_qmlcache_loader.cpp.o"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qmlcache/QtDataManager_qmlcache_loader.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qrc_QtDataManager_raw_qml_0.cpp.o"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qrc_QtDataManager_raw_qml_0.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qrc_qmake_QtDataManager.cpp.o"
+  "CMakeFiles/QtDataManager.dir/build/.rcc/qrc_qmake_QtDataManager.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/controllers/valuedelegate.cpp.o"
+  "CMakeFiles/QtDataManager.dir/controllers/valuedelegate.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/dbmanager.cpp.o"
+  "CMakeFiles/QtDataManager.dir/dbmanager.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/main.cpp.o"
+  "CMakeFiles/QtDataManager.dir/main.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/models/treemodel.cpp.o"
+  "CMakeFiles/QtDataManager.dir/models/treemodel.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/models/treenode.cpp.o"
+  "CMakeFiles/QtDataManager.dir/models/treenode.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/qtdatamanager_qmltyperegistrations.cpp.o"
+  "CMakeFiles/QtDataManager.dir/qtdatamanager_qmltyperegistrations.cpp.o.d"
+  "CMakeFiles/QtDataManager.dir/views/mainwindow.cpp.o"
+  "CMakeFiles/QtDataManager.dir/views/mainwindow.cpp.o.d"
+  "QtDataManager/QtDataManager.qmltypes"
+  "bin/QtDataManagerApp"
+  "bin/QtDataManagerApp.pdb"
+  "meta_types/qt6qtdatamanager_metatypes.json"
+  "meta_types/qt6qtdatamanager_metatypes.json.gen"
+  "qtdatamanager_qmltyperegistrations.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/QtDataManager.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,37 @@
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts.sql:/docker-entrypoint-initdb.d/scripts.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d mydb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: mydb
+      DB_USER: user
+      DB_PASSWORD: password
+    ports:
+      - "5900:5900"  # Для VNC, если нужно
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw  # Для X11 forwarding, если хост поддерживает
+
+volumes:
+  postgres_data:

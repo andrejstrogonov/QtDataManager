@@ -1,0 +1,4 @@
+module QtDataManager
+typeinfo QtDataManager.qmltypes
+prefer :/QtDataManager/
+

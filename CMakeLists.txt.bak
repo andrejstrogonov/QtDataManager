@@ -1,0 +1,56 @@
+cmake_minimum_required(VERSION 3.16)
+project(QtDataManager LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Test Qml)
+
+set(SOURCES
+    main.cpp
+    dbmanager.cpp
+    models/treemodel.cpp
+    models/treenode.cpp
+    views/mainwindow.cpp
+    delegates/valuedelegate.cpp
+)
+
+set(HEADERS
+    dbmanager.h
+    models/treemodel.h
+    models/treenode.h
+    views/mainwindow.h
+    delegates/valuedelegate.h
+)
+
+qt_add_executable(${PROJECT_NAME}
+    ${SOURCES}
+    ${HEADERS}
+    views/mainwindow.ui
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Sql Qt6::Qml)
+
+# --- tests ------------------------------------------------------------
+enable_testing()
+
+add_executable(test_treenode
+    tests/test_treenode.cpp
+    models/treenode.cpp
+)
+target_link_libraries(test_treenode PRIVATE Qt6::Test)
+add_test(NAME TreeNodeTest COMMAND test_treenode)
+
+add_executable(test_valuedelegate
+    tests/test_valuedelegate.cpp
+    delegates/valuedelegate.cpp
+)
+target_link_libraries(test_valuedelegate PRIVATE Qt6::Test)
+add_test(NAME ValueDelegateTest COMMAND test_valuedelegate)
+
+add_executable(test_dbmanager
+    tests/test_dbmanager.cpp
+    dbmanager.cpp
+)
+target_link_libraries(test_dbmanager PRIVATE Qt6::Test Qt6::Sql)
+add_test(NAME DbManagerTest COMMAND test_dbmanager)
