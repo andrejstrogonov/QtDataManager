@@ -2,6 +2,8 @@
 #define TEST_TREENODE_H
 
 #include <QtTest/QtTest>
+#include <QVector>
+#include <QVariant>
 #include "models/treenode.h"
 
 class TestTreeNode : public QObject
@@ -24,7 +26,8 @@ void TestTreeNode::testAppendChild()
     TreeNode root(data);
     QCOMPARE(root.childCount(), 0);
 
-    TreeNode *child = new TreeNode({"child"}, &root);
+    // Fixed: Explicitly cast to QVector<QVariant>
+    TreeNode *child = new TreeNode(QVector<QVariant>({"child"}), &root);
     root.appendChild(child);
     QCOMPARE(root.childCount(), 1);
     QCOMPARE(root.child(0)->data(0).toString(), QString("child"));
@@ -32,9 +35,10 @@ void TestTreeNode::testAppendChild()
 
 void TestTreeNode::testRowAndParent()
 {
-    TreeNode root({"r"});
-    TreeNode *c1 = new TreeNode({"c1"}, &root);
-    TreeNode *c2 = new TreeNode({"c2"}, &root);
+    // Fixed: Explicitly cast to QVector<QVariant>
+    TreeNode root(QVector<QVariant>({"r"}));
+    TreeNode *c1 = new TreeNode(QVector<QVariant>({"c1"}), &root);
+    TreeNode *c2 = new TreeNode(QVector<QVariant>({"c2"}), &root);
     root.appendChild(c1);
     root.appendChild(c2);
 
@@ -43,12 +47,11 @@ void TestTreeNode::testRowAndParent()
     QCOMPARE(c1->parent()->data(0).toString(), QString("r"));
 }
 
-// Additional tests
 void TestTreeNode::testRemoveChild()
 {
-    TreeNode root({"root"});
-    TreeNode *child1 = new TreeNode({"child1"}, &root);
-    TreeNode *child2 = new TreeNode({"child2"}, &root);
+    TreeNode root(QVector<QVariant>({"root"}));
+    TreeNode *child1 = new TreeNode(QVector<QVariant>({"child1"}), &root);
+    TreeNode *child2 = new TreeNode(QVector<QVariant>({"child2"}), &root);
     root.appendChild(child1);
     root.appendChild(child2);
     
@@ -66,22 +69,38 @@ void TestTreeNode::testData()
     QCOMPARE(node.data(0).toString(), QString("test"));
     QCOMPARE(node.data(1).toString(), QString("data"));
     QCOMPARE(node.data(2).toString(), QString("values"));
-    QCOMPARE(node.data(3), QVariant()); // Out of bounds
+    QCOMPARE(node.data(3), QVariant()); 
 }
 
 void TestTreeNode::testInsertChild()
 {
-    TreeNode root({"root"});
-    TreeNode *child1 = new TreeNode({"child1"}, &root);
-    TreeNode *child2 = new TreeNode({"child2"}, &root);
+    TreeNode root(QVector<QVariant>({"root"}));
+    TreeNode *child1 = new TreeNode(QVector<QVariant>({"child1"}), &root);
+    TreeNode *child2 = new TreeNode(QVector<QVariant>({"child2"}), &root);
     root.appendChild(child1);
     
-    // Insert at beginning
     root.insertChild(0, child2);
     QCOMPARE(root.child(0)->data(0).toString(), QString("child2"));
     QCOMPARE(root.child(1)->data(0).toString(), QString("child1"));
 }
 
+void TestTreeNode::testConstruction()
+{
+    QVector<QVariant> data({"node"});
+    TreeNode node(data);
+    QCOMPARE(node.data(0).toString(), QString("node"));
+    QCOMPARE(node.parent(), nullptr);
+}
+
+void TestTreeNode::testChildCount()
+{
+    TreeNode root(QVector<QVariant>({"root"}));
+    QCOMPARE(root.childCount(), 0);
+    root.appendChild(new TreeNode(QVector<QVariant>({"c1"})));
+    QCOMPARE(root.childCount(), 1);
+}
 
 QTEST_MAIN(TestTreeNode)
 #include "test_treenode.moc"
+
+#endif
