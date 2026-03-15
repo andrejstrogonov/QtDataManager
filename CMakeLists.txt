@@ -11,6 +11,7 @@ set(CMAKE_AUTOUIC ON)
 
 # Export compile commands for better IDE integration
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Test Qml)
 
@@ -58,10 +59,8 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 # --- tests ------------------------------------------------------------
 enable_testing()
 
-add_executable(test_treenode
-    tests/test_treenode.cpp
-    models/treenode.cpp
-)
+add_executable(test_treenode test_treenode.cpp models/treenode.h)
+
 
 target_include_directories(test_treenode PRIVATE ${CMAKE_SOURCE_DIR})
 
