@@ -15,15 +15,8 @@ TreeNode::~TreeNode() {
 
 void TreeNode::appendChild(TreeNode *child) {
     if (child) {
-        child->m_parent = this; // Critical for TreeModel index mapping
+        child->m_parent = this; 
         m_children.append(child);
-    }
-}
-
-void TreeNode::insertChild(int row, TreeNode *child) {
-    if (child && row >= 0 && row <= m_children.size()) {
-        child->m_parent = this;
-        m_children.insert(row, child);
     }
 }
 

@@ -2,35 +2,30 @@
 #define TREENODE_H
 
 #include <QString>
-#include <QVector>
-#include <QVariant>
 #include <QList>
+#include <QVariant>
+#include <QVector>
 
 class TreeNode {
 public:
-    enum Type { Root, Category, Item }; // Добавьте типы, если их нет
+    // Added Object, Transmitter, Spec, and Root to match your Model logic
+    enum class Type { Root, Object, Transmitter, Spec };
 
-    // Конструктор должен соответствовать вызову в .cpp
-    explicit TreeNode(const QString &display = QString(), Type type = Root, int id = 0, TreeNode *parent = nullptr);
-    
-    // Для совместимости с вашим тестом (QVector<QVariant>)
+    explicit TreeNode(const QString &display, Type type, int id, TreeNode *parent = nullptr);
     explicit TreeNode(const QVector<QVariant> &data, TreeNode *parent = nullptr);
-    
     ~TreeNode();
 
     void appendChild(TreeNode *child);
-    void insertChild(int row, TreeNode *child); // Добавлено для теста
-    void removeChild(TreeNode *child);        // Добавлено для теста
-    void removeChild(int row);
-
+    
     TreeNode *child(int row) const;
     int childCount() const;
-    int columnCount() const;
+    int columnCount() const { return 1; }
+    
     QVariant data(int column) const;
     void setData(int column, const QVariant &value);
-    int row() const;
-    TreeNode *parent();
     
+    int row() const;
+    TreeNode *parent() const;
     Type type() const;
     int id() const;
 
@@ -39,7 +34,8 @@ private:
     Type m_type;
     int m_id;
     TreeNode *m_parent;
-    QList<TreeNode*> m_children; 
+    QList<TreeNode*> m_children;
 };
 
-#endif
+#endif // TREENODE_H
+
