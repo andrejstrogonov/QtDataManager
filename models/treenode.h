@@ -1,41 +1,31 @@
 #ifndef TREENODE_H
 #define TREENODE_H
 
-#include <QVariant>
 #include <QVector>
+#include <QVariant>
 
 class TreeNode
 {
 public:
-    enum class Type {
-        Root,
-        Object,
-        Transmitter,
-        Spec
-    };
-
-    TreeNode(const QString &display, Type type = Type::Root, int id = -1, TreeNode *parent = nullptr);
+    // The constructor used in your tests
+    explicit TreeNode(const QVector<QVariant> &data, TreeNode *parent = nullptr);
     ~TreeNode();
 
     void appendChild(TreeNode *child);
-    void removeChild(int row);
-    TreeNode *child(int row) const;
+    void insertChild(int row, TreeNode *child);
+    void removeChild(TreeNode *child);
+
+    TreeNode *child(int row);
     int childCount() const;
-    int columnCount() const;
-    QVariant data(int column) const;
-    void setData(int column, const QVariant &value);
     int row() const;
     TreeNode *parent();
-
-    Type type() const;
-    int id() const;
+    QVariant data(int column) const;
 
 private:
     QVector<TreeNode*> m_children;
-    QString m_display;
-    Type m_type;
-    int m_id;
-    TreeNode *m_parent;
+    QVector<QVariant> m_itemData;
+    TreeNode *m_parentItem;
 };
 
 #endif // TREENODE_H
+
