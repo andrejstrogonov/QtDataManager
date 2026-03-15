@@ -4,7 +4,7 @@ project(QtDataManager VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Автоматическая генерация мета-кода Qt
+# Глобальная генерация мета-кода Qt
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
@@ -12,7 +12,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Test Qml)
 
-# Список исходных файлов
+# --- Исходные файлы ---
 set(SOURCES
     main.cpp
     dbmanager.cpp
@@ -23,7 +23,6 @@ set(SOURCES
     controllers/valuedelegate.cpp
 )
 
-# Список заголовочных файлов
 set(HEADERS
     dbmanager.h
     models/treemodel.h
@@ -34,14 +33,8 @@ set(HEADERS
 )
 
 # --- Основное приложение ---
-# Используем имя QtDataManagerApp, чтобы избежать конфликта с папкой проекта
-qt_add_executable(QtDataManagerApp 
-    ${SOURCES} 
-    ${HEADERS} 
-    views/mainwindow.ui
-)
+qt_add_executable(QtDataManagerApp ${SOURCES} ${HEADERS} views/mainwindow.ui)
 
-# Конфигурация QML модуля (привязана к QtDataManagerApp)
 qt_add_qml_module(QtDataManagerApp
     URI QtDataManager
     VERSION 1.0
@@ -51,10 +44,13 @@ qt_add_qml_module(QtDataManagerApp
 target_include_directories(QtDataManagerApp PRIVATE ${CMAKE_SOURCE_DIR})
 target_link_libraries(QtDataManagerApp PRIVATE Qt6::Widgets Qt6::Sql Qt6::Qml)
 
-# --- Тесты ------------------------------------------------------------
+# --- Тесты ---
 enable_testing()
 
-# 1. Тест TreeNode (добавлен treenode.cpp для линковки)
+# 1. Тест TreeNode
+# FIX: Отключаем AUTOMOC для этого файла, так как вы используете ручной инклуд .moc в коде
+set_source_files_properties(tests/test_treenode.cpp PROPERTIES SKIP_AUTOMOC ON)
+
 add_executable(test_treenode 
     tests/test_treenode.cpp 
     models/treenode.cpp 
