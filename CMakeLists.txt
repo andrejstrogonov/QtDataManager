@@ -55,7 +55,7 @@ enable_testing()
 # 1. TreeNode Test
 # We include the .cpp and .h to ensure all symbols are present
 add_executable(test_treenode 
-    test_treenode.cpp 
+    tests/test_treenode.cpp 
     models/treenode.cpp 
     models/treenode.h
 )
