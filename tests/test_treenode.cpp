@@ -11,6 +11,11 @@ class TestTreeNode : public QObject
 private slots:
     void testAppendChild();
     void testRowAndParent();
+    void testRemoveChild();
+    void testData();
+    void testInsertChild();
+    void testConstruction();
+    void testChildCount
 };
 
 void TestTreeNode::testAppendChild()
