@@ -101,5 +101,5 @@ void TestTreeNode::testChildCount()
 }
 
 QTEST_MAIN(TestTreeNode)
-
+#include "test_treenode.moc"
 #endif
