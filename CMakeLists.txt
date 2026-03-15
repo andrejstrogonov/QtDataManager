@@ -39,7 +39,12 @@ qt_add_executable(${PROJECT_NAME}
     views/mainwindow.ui
 )
 
-# FIX: You must define the QML module for the executable to avoid "DQT_QML_MODEL" errors
+# FIX 1: Rename the output binary to avoid collision with the directory "QtDataManager"
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    OUTPUT_NAME "QtDataManagerApp"
+)
+
+# Define the QML module
 qt_add_qml_module(${PROJECT_NAME}
     URI QtDataManager
     VERSION 1.0
@@ -53,7 +58,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Sql Qt6::Qml)
 enable_testing()
 
 # 1. TreeNode Test
-# We include the .cpp and .h to ensure all symbols are present
+# FIX 2: Corrected path to tests/test_treenode.cpp
 add_executable(test_treenode 
     tests/test_treenode.cpp 
     models/treenode.cpp 
@@ -82,4 +87,3 @@ add_executable(test_dbmanager
 target_include_directories(test_dbmanager PRIVATE ${CMAKE_SOURCE_DIR})
 target_link_libraries(test_dbmanager PRIVATE Qt6::Test Qt6::Sql)
 add_test(NAME DbManagerTest COMMAND test_dbmanager)
-
